@@ -15,73 +15,24 @@ Vue模块，用于在应用程序中延迟加载图像。该项目的一些目�
 
 加载图像时添加加载类
 
-同时支持Vue 1.0和Vue 2.0
-
-
-
-# Table of Contents
-
-* [___Demo___](#demo)
-* [___Requirements___](#requirements)
-* [___Installation___](#installation)
-* [___Usage___](#usage)
- * [___Constructor Options___](#constructor-options)
- * [___Implementation___](#implementation)
-    * [___Basic___](#basic)
-    * [___Css state___](#css-state)
-* [___Methods___](#methods)
-  * [__Event hook__](#event-hook)
-  * [__LazyLoadHandler__](#lazyloadhandler)
-  * [__Performance__](#performance)
-* [___Authors && Contributors___](#authors-&&-Contributors)
-* [___License___](#license)
-
-
-# Demo
-
-[___Demo___](http://hilongjw.github.io/vue-lazyload/)
-
-# Requirements
-
-- [Vue.js](https://github.com/vuejs/vue) `1.x` or `2.x`
-
-
-# Installation
-
 ## npm
 
 ```bash
+1.安装插件
 
-$ npm i vue-lazyload -S
+npm install vue-lazyload --save-dev
 
-```
+2.在入口文件main.js中引入并使用
 
-## CDN
-
-CDN: [https://unpkg.com/vue-lazyload/vue-lazyload.js](https://unpkg.com/vue-lazyload/vue-lazyload.js)
-
-```html
-<script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
-<script>
-  Vue.use(VueLazyload)
-  ...
-</script>
-
-```
-
-# Usage
-
-main.js:
-
-```javascript
-
-import Vue from 'vue'
-import App from './App.vue'
 import VueLazyload from 'vue-lazyload'
+
+直接使用
 
 Vue.use(VueLazyload)
 
-// or with options
+或者添加自定义选项
+
+
 Vue.use(VueLazyload, {
   preLoad: 1.3,
   error: 'dist/error.png',
@@ -89,12 +40,10 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 
-new Vue({
-  el: 'body',
-  components: {
-    App
-  }
-})
+3.修改图片显示方式为懒加载（将 :src 属性直接改为v-lazy）
+
+<a href="javascript:;"><img v-lazy="'/static/img/' + item.productImage"></a>
+
 ```
 
 template:

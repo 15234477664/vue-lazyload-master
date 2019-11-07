@@ -7,12 +7,15 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![CDNJS version](https://img.shields.io/cdnjs/v/vue-lazyload.svg)](https://cdnjs.com/libraries/vue-lazyload)
 
-Vue module for lazyloading images in your applications. Some of goals of this project worth noting include:
+Vue模块，用于在应用程序中延迟加载图像。该项目的一些目标值得注意：
 
-* Be lightweight, powerful and easy to use
-* Work on any image type
-* Add loading class while image is loading
-* Supports both of Vue 1.0 and Vue 2.0
+轻巧，功能强大且易于使用
+
+处理任何图像类型
+
+加载图像时添加加载类
+
+同时支持Vue 1.0和Vue 2.0
 
 
 

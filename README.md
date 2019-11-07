@@ -33,11 +33,11 @@ Vue.use(VueLazyload)
 或者添加自定义选项
 
 
-Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'dist/loading.gif',
-  attempt: 1
+Vue.use(VueLazyload, {  
+  preLoad: 1.3,   //预加载的宽高比
+  error: 'dist/error.png',//图片加载失败时使用的图片源
+  loading: 'dist/loading.gif',//图片加载的路径
+  attempt: 1//尝试加载次数
 })
 
 3.修改图片显示方式为懒加载（将 :src 属性直接改为v-lazy）
